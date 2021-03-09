@@ -8,9 +8,16 @@ function displayProfiles(array) {
      }//end for
 }//end displayProfiles
 
+function displayName(number) {
+    $('#name-here').empty();
+    $('#name-here').append(`
+        Find me: <span>${ people[number].name }</span>
+    `);
+}//end displayName
+
 function letsPlay() {
     const randomProfile = randomNumber(0, (people.length - 1));
-
+    displayName (randomProfile);
 }//end letsPlay
 
 function randomNumber(min, max){
